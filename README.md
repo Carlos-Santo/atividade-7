@@ -34,6 +34,13 @@ Declaradas em `android/app/src/main/AndroidManifest.xml`:
 
 O app não cria nem altera compromissos.
 
+### APK de release (R8)
+
+No APK de release o R8 renomeia as classes do `device_calendar`, e a lista de
+calendários passa a vir sem id. Por isso `android/app/proguard-rules.pro` mantém as
+classes do plugin intactas, como pede a
+[documentação do pacote](https://github.com/builttoroam/device_calendar/issues/99).
+
 ## Baixar o APK
 
 O APK é gerado automaticamente pelo GitHub Actions a cada push, então não é preciso
